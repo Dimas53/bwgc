@@ -6,7 +6,7 @@ const HeadText = (props) => {
         <div className="headText">
             <h6>{props.title}</h6>
             <p>
-                <a href="#" id="" className="headText_link">
+                <a href="foo" id="tel" className="headText_link">
                     {props.link}
                 </a>
             </p>
@@ -16,6 +16,7 @@ const HeadText = (props) => {
             <p className="headText_link">
                 {props.mail}
             </p>
+            { props.children }
 
         </div>
     )

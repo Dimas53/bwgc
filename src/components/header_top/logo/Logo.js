@@ -1,13 +1,13 @@
 import React from "react";
 import '../logo/logo.sass';
 
-const Logo = () => {
+const LogoTop = () => {
     return (
         <React.Fragment>
-            <h1 className="logo_title">ООО "БВГЦ"</h1>
+            <h1 className="logo_title"><a href="foo">LLC "BWGC"</a></h1>
         </React.Fragment>
     )
 
 };
 
-export default Logo;
+export default LogoTop;
