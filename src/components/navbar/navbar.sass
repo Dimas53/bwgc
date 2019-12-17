@@ -1,3 +1,42 @@
 .navibar
   background: #f85a40
   padding: 1rem
+
+.lang
+  a
+    color: #eee
+    font-weight: 600
+    font-size: 18px
+    &:hover, &:active
+      color: rgba(0, 0, 0, 0.9)
+  span
+    font-size: 12px
+    font-weight: 700
+    padding: 0 4px
+.active-lang
+  color: rgba(0, 0, 0, 0.9)!important
+
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active
+  transform: scale(1.15)
+
+.hvr-float-shadow
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  position: relative
+  -webkit-transition-duration: 0.4s
+  transition-duration: 0.4s
+  -webkit-transition-property: transform
+  -webkit-transition-property: -webkit-transform
+  transition-property: -webkit-transform
+  will-change: transform
+
+
+
+
+
+
+

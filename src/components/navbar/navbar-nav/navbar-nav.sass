@@ -1,10 +1,57 @@
 .navibar_nav
+  position: relative
   .navibar_item
     margin: 8px 20px
-  a
+  .active
+    a
+     color: rgba(0, 0, 0, 0.7)
+  .navibar_link
     color: #eee
     font-weight: 600
     text-transform: uppercase
     font-size: 16px
     letter-spacing: 1px
     padding: 0.5rem
+    &:hover
+      color: rgba(0, 0, 0, 0.7)
+
+
+.dropdown-toggle::after
+  display: inline-block
+  width: 0
+  height: 0
+  margin-left: 0.255em
+  vertical-align: 0.255em
+  content: ""
+  border-top: 0.3em solid
+  border-right: 0.3em solid transparent
+  border-bottom: 0
+  border-left: 0.3em solid transparent
+
+.show
+  display: block
+
+.dropdown-item
+  text-transform: uppercase
+  font-weight: 600
+  font-size: 15px
+  color: #333
+
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 305px
+  z-index: 1000
+  display: none
+  float: left
+  min-width: 10rem
+  padding: 0.5rem 0
+  margin: 0.125rem 0 0
+  font-size: 1rem
+  color: #212529
+  text-align: center
+  list-style: none
+  background-color: #fff
+  background-clip: padding-box
+  border: 1px solid rgba(0, 0, 0, 0.15)
+  border-radius: 0.25rem
