@@ -1,14 +1,14 @@
 import React from "react";
-import '../navbar/navbar.sass';
+import cls from './navbar.module.sass';
 import Nav from "./navbar-nav/navbar-nav";
 
 const Navbar = () => {
     return (
-        <nav className="navibar d-flex align-items-center">
-            <div className="lang">
-                <a href="foo" className="hvr-float-shadow hvr-grow">ru</a>
+        <nav className={cls.navibar + ' ' + 'd-flex align-items-center'}>
+            <div className={cls.lang}>
+                <a href="foo" className={cls['hvr-float-shadow']}>ru</a>
                 <span>|</span>
-                <a href="foo" className="hvr-float-shadow hvr-grow active-lang">en</a>
+                <a href="foo" className={`${cls['hvr-float-shadow']} ${cls['active-lang']}`}>en</a>
             </div>
             <Nav/>
 
@@ -17,3 +17,6 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+
+

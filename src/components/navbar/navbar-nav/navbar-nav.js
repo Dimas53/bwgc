@@ -3,24 +3,20 @@ import DropdownMenu from "../dropdown/dropdown-menu";
 import '../navbar-nav/navbar-nav.sass';
 
 class Nav extends Component {
+
     state = {
-        dropdown: [
-            {classes: 'dropdown-menu'}
-        ]
+        condition: false
+
     }
 
     changeClassHandler = () => {
-        console.log('Clicked')
-
         this.setState({
-            classes: 'dropdown-menu show'
-        })
+            condition: !this.state.condition
+        });
     }
 
 
     render(props) {
-
-        const drop = this.state.dropdown
 
         return (
             <div className="d-flex flex-grow-1 justify-content-center">
@@ -29,10 +25,11 @@ class Nav extends Component {
                     <li className="navibar_item"><a href="foo" className="navibar_link">About</a></li>
                     <li className="navibar_item"><a href="#" className="navibar_link">Services</a></li>
 
+                    <DropdownMenu
+                        classes={ this.state.condition ? "dropdown-menu show" : "dropdown-menu" }
+                        classToggler={this.changeClassHandler}/>
 
-                    <DropdownMenu classes={drop[0].classes} classToggler={this.changeClassHandler}/>
-
-                    <li onClick={this.changeClassHandler} className="navibar_item"><a href="#" className="navibar_link">Contact</a></li>
+                    <li className="navibar_item"><a href="#" className="navibar_link">Contact</a></li>
                 </ul>
             </div>
 
